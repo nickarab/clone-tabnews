@@ -1,0 +1,100 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.background {
+    background: url('../Fundo.png') repeat-x;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-size: 100% 100%;
+    image-rendering: pixelated;
+    animation: moverFundo 2s linear infinite;
+}
+
+.sonic {
+    width: 300px;
+    height: 300px;
+    background: url('../Sonic.gif') no-repeat;
+    background-size: contain;
+    background-position: center;
+    image-rendering: pixelated;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);     
+    bottom: 23%; 
+    z-index: 2;
+}
+
+.textoContainer {
+    position: absolute;
+    top: 15%; 
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 3; 
+    font-family: 'Arial Black', Gadget, sans-serif;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.titulo {
+    color: #fff;
+    font-size: 3rem;
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+    text-shadow: 4px 4px 0px #000; 
+}
+
+.subtitulo {
+    color: #ffcc00; 
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: bold;
+    text-shadow: 3px 3px 0px #000;
+}
+
+@keyframes moverFundo {
+    from {
+        background-position-x: 0;
+    }
+    to {
+        background-position-x: -100vw; 
+    }
+}
+
+@media (max-width: 768px) {
+    .sonic {
+        width: 180px;
+        height: 180px;
+        
+        bottom: 21%; 
+    }
+
+    .textoContainer {
+        top: 8%; 
+        padding: 0 15px;
+    }
+
+    .titulo {
+        font-size: 1.8rem; 
+        text-shadow: 3px 3px 0px #000;
+    }
+
+    .subtitulo {
+        font-size: 1rem; 
+        text-shadow: 2px 2px 0px #000;
+    }
+}
