@@ -1,4 +1,4 @@
-import databse from '../../../../infra/database.js'
+import databse from "infra/database.js";
 
 
 async function status(request, response) {
